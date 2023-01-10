@@ -49,3 +49,27 @@ function MyTag(...){
     * reusable;
     * semantically relevant to the actual web app we're building. 
 ***
+
+### Restricting Directive To Element or Attribute
+```
+function MyDirective(){
+    var ddo = {
+        restrict: 'AE',
+        ...
+    };
+    return ddo;
+} 
+```
+`restrict: 'AE'` - Default: 'A' - attribute, 'E' - element
+
+`restrict: 'A'` - Best Practice: restrict to attribute if directive is extending behavior, e.g., `ng-repeat` 
+
+`restrict: 'E'` - Best Practice: restrict to element if directive is defining a component with an associated template, e.g., `<list-item>`
+***
+#### _Summary_
+* The DDO's restrict property determines what AngularJS compiler should look for to detect your custom directive.
+* Using directive as a different restrict type than defined will cause the compiler to simply ignore it.
+* Best Practice: use 'E' for element when directive has content along with possible behavior.
+* Best Practice: use 'A' for attribute when directive has no content and only extends the behavior of host element.
+* Class and comment directives are possible, but not used.
+***

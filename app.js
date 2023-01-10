@@ -10,6 +10,7 @@
 
     function ListItem(){
         var ddo = {
+            restrict: 'E',
             templateUrl: 'listItem.html'
         };
 
