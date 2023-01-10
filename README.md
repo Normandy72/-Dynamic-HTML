@@ -37,3 +37,15 @@ function MyTag(...){
 
 #### Step 3: Use In HTML
 `<my-tag></my-tag>` - note that the name is __not__ myTag, but my-tag
+
+***
+#### _Summary_
+* Directive is a marker in HTML that Angular complies into some behavior.
+    * It can also change the HTML elements themselves.
+* Register name of directive using (normallized) camelCase.
+* Registered factory function must return a DDO.
+    * The factory function gets invoked only once.
+* With custom directives, our HTML coding becomes
+    * reusable;
+    * semantically relevant to the actual web app we're building. 
+***
